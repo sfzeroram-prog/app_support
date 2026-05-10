@@ -1,0 +1,409 @@
+/* =============================================
+   App Support & Legal — style.css
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --bg:         #f5f3ee;
+  --surface:    #ffffff;
+  --text:       #1c1c1c;
+  --text-sub:   #5c5a58;
+  --text-muted: #9a9799;
+  --border:     #dedad2;
+  --border-em:  #b8b4aa;
+}
+
+body {
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+               "Yu Gothic", "Meiryo", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.85;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 22px;
+  width: 100%;
+}
+
+/* ── Site Header ── */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 15px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-logo {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "HiraMinProN-W3", serif;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.site-logo:hover { color: var(--text-sub); }
+
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.header-nav-list li + li::before {
+  content: "/";
+  color: var(--border-em);
+  padding: 0 7px;
+  font-size: 0.72rem;
+}
+
+.header-nav-list a {
+  font-size: 0.76rem;
+  color: var(--text-sub);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.header-nav-list a:hover { color: var(--text); }
+
+/* ── Main ── */
+main {
+  flex: 1;
+  padding: 52px 0 80px;
+}
+
+/* ── Page Heading ── */
+.page-heading {
+  margin-bottom: 44px;
+}
+
+.page-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+h1 {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "HiraMinProN-W3", serif;
+  font-size: clamp(1.45rem, 5vw, 1.85rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+}
+
+.page-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Intro Text (legal pages) ── */
+.intro-text {
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--text-sub);
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-em);
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 48px;
+}
+
+/* ── Legal Sections ── */
+.legal-section {
+  margin-bottom: 44px;
+}
+
+h2 {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "HiraMinProN-W3", serif;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+}
+
+.sec-n {
+  font-size: 0.64rem;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+p {
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+p:last-child { margin-bottom: 0; }
+
+/* ── Bullet List (legal body) ── */
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 14px;
+}
+
+.bullet-list li {
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--text);
+  padding-left: 1.1em;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.bullet-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.bullet-list:last-child { margin-bottom: 0; }
+
+/* ── Index: Section Label ── */
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+.lead-text {
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--text-sub);
+  margin-bottom: 44px;
+}
+
+/* ── Index: App List ── */
+.app-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 52px;
+}
+
+.app-list li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.93rem;
+  color: var(--text);
+}
+
+.app-list li:first-child { border-top: 1px solid var(--border); }
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--border-em);
+  flex-shrink: 0;
+}
+
+/* ── Index: Page Cards ── */
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s ease, background 0.15s ease;
+  min-height: 44px;
+}
+
+.page-card:hover {
+  border-color: var(--border-em);
+  background: #faf8f3;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  color: var(--text);
+}
+
+.card-hint {
+  font-size: 0.77rem;
+  color: var(--text-muted);
+}
+
+.arrow {
+  color: var(--border-em);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* ── Support Page ── */
+.support-lead {
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--text-sub);
+  margin-bottom: 28px;
+}
+
+.cta-wrap {
+  margin: 24px 0 36px;
+}
+
+.btn-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  min-height: 44px;
+  transition: background 0.15s ease;
+}
+
+.btn-form:hover { background: #383838; }
+
+.info-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.info-panel h3 {
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  margin-bottom: 14px;
+}
+
+.note-text {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Site Footer ── */
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 26px 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.footer-nav a {
+  font-size: 0.79rem;
+  color: var(--text-sub);
+  text-decoration: none;
+}
+
+.footer-nav a:hover { color: var(--text); }
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ── Links ── */
+a {
+  color: var(--text);
+  text-underline-offset: 2px;
+}
+
+.content-link {
+  color: var(--text-sub);
+  text-decoration: underline;
+}
+
+.content-link:hover { color: var(--text); }
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  main { padding: 36px 0 60px; }
+  .page-heading { margin-bottom: 32px; }
+  .legal-section { margin-bottom: 32px; }
+  .page-card { padding: 15px 16px; }
+  .app-list li { padding: 12px 0; }
+  .info-panel { padding: 18px; }
+  .header-nav-list { display: none; }
+}
